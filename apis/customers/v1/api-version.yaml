@@ -5,23 +5,20 @@ metadata:
   name: customers-v1
   namespace: apis
 spec:
-  apiName: test
+  apiName: customers
   headers:
     request: {}
     response: {}
   release: v1.0.0
   routes:
-  - headers:
-      version: v1
+    - pathPrefix: /v1
   service:
     name: customer-app-v1
     openApiSpec:
       path: /openapi.yaml
       port:
-        name: ""
         number: 3000
     port:
-      name: ""
       number: 3000
   stripPathPrefix: false
   title: v1

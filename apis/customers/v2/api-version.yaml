@@ -5,14 +5,13 @@ metadata:
   name: customers-v2
   namespace: apis
 spec:
-  apiName: test
+  apiName: customers
   headers:
     request: {}
     response: {}
   release: v2.0.0
   routes:
-  - headers:
-      version: v2
+    - pathPrefix: /v2
   service:
     name: customer-app-v2
     openApiSpec:
