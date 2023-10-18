@@ -30,7 +30,7 @@ spec:
             name: customer-data
         - name: openapi
           configMap:
-            name: customer-apispec
+            name: customer-v1-apispec
 
 ---
 apiVersion: v1
