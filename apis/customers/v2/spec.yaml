@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: customer-apispec
+  name: customer-v2-apispec
   namespace: apis
 data:
   openapi.yaml: |
     openapi: "3.0.0"
     info:
-      version: 1.0.0
+      version: 2.0.0
       title: Customers
       description: Traefik Airlines Customer API
       contact:
@@ -135,6 +135,39 @@ data:
                 application/json:
                   schema:
                     $ref: "#/components/schemas/Error"
+      /customerRequests
+        get:
+          summary: Retrieve customers
+          operationId: getCustomers
+          tags:
+            - customers
+          parameters:
+            - name: limit
+              in: query
+              description: How many items to return at one time (max 100)
+              required: false
+              schema:
+                type: integer
+                maximum: 100
+                format: int32
+          responses:
+            '200':
+              description: A paged array of customers
+              headers:
+                x-next:
+                  description: A link to the next page of responses
+                  schema:
+                    type: string
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Customers"
+            default:
+              description: unexpected error
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Error"                 
     components:
       schemas:
         Customer:

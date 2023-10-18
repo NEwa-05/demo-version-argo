@@ -1,0 +1,12 @@
+---
+apiVersion: hub.traefik.io/v1alpha1
+kind: API
+metadata:
+  name: test
+  namespace: apis
+  labels:
+    area: customers
+    module: crm  
+spec:
+  currentVersion: customers-v1
+  pathPrefix: /customers
