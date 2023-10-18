@@ -6,9 +6,6 @@ metadata:
   namespace: apis
 spec:
   apiName: customers
-  headers:
-    request: {}
-    response: {}
   release: v1.0.0
   routes:
     - pathPrefix: /v1
@@ -20,5 +17,5 @@ spec:
         number: 3000
     port:
       number: 3000
-  stripPathPrefix: true
+  stripPathPrefix: false
   title: v1
