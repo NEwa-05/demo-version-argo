@@ -6,7 +6,7 @@ metadata:
   namespace: apis
 spec:
   apiName: customers
-  release: v2.0.0
+  release: 2.0.0
   routes:
     - pathPrefix: /v2
   service:
