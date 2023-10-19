@@ -18,5 +18,4 @@ spec:
         number: 3000
     port:
       number: 3000
-  stripPathPrefix: false
   title: v1
