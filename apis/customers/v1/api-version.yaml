@@ -8,7 +8,7 @@ spec:
   apiName: customers
   release: 1.0.0
   routes:
-    - pathPrefix: /v1
+    - pathPrefix: "/v1"
   service:
     name: customer-app-v1
     openApiSpec:
