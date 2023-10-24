@@ -140,7 +140,7 @@ data:
           summary: Retrieve customers
           operationId: getCustomers
           tags:
-            - customersReq
+            - customerRequests
           parameters:
             - name: limit
               in: query
@@ -161,7 +161,7 @@ data:
               content:
                 application/json:
                   schema:
-                    $ref: "#/components/schemas/customerRequests"
+                    $ref: "#/components/schemas/CustomerRequests"
             default:
               description: unexpected error
               content:
@@ -194,6 +194,25 @@ data:
           maxItems: 100
           items:
             $ref: "#/components/schemas/Customer"
+        CustomerRequests:
+          type: object
+          required:
+            - Requestid
+            - requestTitle
+            - requestContent
+          properties:
+            Requestid:
+              type: integer
+              format: int64
+            requestTitle:
+              type: string
+            requestContent:
+              type: string
+            points:
+              type: integer
+              format: int64
+            status:
+              type: string
         Error:
           type: object
           required:
