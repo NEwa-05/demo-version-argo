@@ -161,7 +161,7 @@ data:
               content:
                 application/json:
                   schema:
-                    $ref: "#/components/schemas/CustomersRequests"
+                    $ref: "#/components/schemas/customerRequests"
             default:
               description: unexpected error
               content:
