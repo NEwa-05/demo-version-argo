@@ -9,7 +9,7 @@ spec:
   release: 2.0.0
   routes:
     - pathPrefix: "/v2"
-  stripPathPrefix: false  
+  stripPathPrefix: true  
   service:
     name: customer-app-v2
     openApiSpec:
