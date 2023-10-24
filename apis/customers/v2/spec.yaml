@@ -137,8 +137,8 @@ data:
                     $ref: "#/components/schemas/Error"
       /customerRequests:
         get:
-          summary: Retrieve customers
-          operationId: getCustomers
+          summary: Retrieve customers Requests
+          operationId: getCustomersRequests
           tags:
             - customerRequests
           parameters:
@@ -152,7 +152,7 @@ data:
                 format: int32
           responses:
             '200':
-              description: A paged array of customers reques
+              description: A paged array of customers requests
               headers:
                 x-next:
                   description: A link to the next page of responses
@@ -207,11 +207,6 @@ data:
             requestTitle:
               type: string
             requestContent:
-              type: string
-            points:
-              type: integer
-              format: int64
-            status:
               type: string
         Error:
           type: object
