@@ -1,0 +1,17 @@
+apiVersion: hub.traefik.io/v1alpha1
+kind: APIRateLimit
+metadata:
+  name: my-rate-limit-customers
+
+spec:
+  limit: 50
+  period: 1m
+
+  anyGroups: true
+
+  apiSelector:
+    matchExpressions:
+      - key: area
+        operator: In
+        values:
+          - customers
