@@ -135,12 +135,12 @@ data:
                 application/json:
                   schema:
                     $ref: "#/components/schemas/Error"
-      /customerRequests
+      /customerRequests:
         get:
           summary: Retrieve customers
           operationId: getCustomers
           tags:
-            - customers
+            - customersReq
           parameters:
             - name: limit
               in: query
@@ -152,7 +152,7 @@ data:
                 format: int32
           responses:
             '200':
-              description: A paged array of customers
+              description: A paged array of customers reques
               headers:
                 x-next:
                   description: A link to the next page of responses
@@ -161,7 +161,7 @@ data:
               content:
                 application/json:
                   schema:
-                    $ref: "#/components/schemas/Customers"
+                    $ref: "#/components/schemas/CustomersRequests"
             default:
               description: unexpected error
               content:
