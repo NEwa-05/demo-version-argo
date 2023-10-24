@@ -9,4 +9,4 @@ metadata:
     module: crm  
 spec:
   pathPrefix: "/customers"
-  currentVersion: customers-v1
+  currentVersion: customers-v2
