@@ -8,4 +8,4 @@ spec:
   description: "API Portal"
   apiGateway: my-gateway
   customDomains:
-    - portal.dblhubw043.demo.traefiklabs.tech
+    - portal.dblhubw045.demo.traefiklabs.tech

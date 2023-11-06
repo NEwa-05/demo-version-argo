@@ -12,4 +12,4 @@ spec:
     - admins
     - custom-pick
   customDomains:
-    - gateway.dblhubw043.demo.traefiklabs.tech
+    - gateway.dblhubw045.demo.traefiklabs.tech
